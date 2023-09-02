@@ -1,0 +1,35 @@
+:root {
+}
+.botao{
+    display: inline-table;
+    width: 20vw;
+    height: 35vh;
+    margin: 2vw 10% 2vw 15%;
+    border: 0;
+    border-radius: 2vw;
+  }
+  #cs {
+    background-color: #EE8683;
+  }
+  #md {
+    background-color: #9BDA9E;
+  }
+  #r {
+    background-color: #C5E6E8;
+  }
+  #d {
+    background-color: #EED28A;
+  }
+  #tex{
+    text-align: center;
+    font-size: 2vw;
+    width: 50%;
+    margin: 2% 25% 0 25%;
+  }
+  .nome{
+    text-align: center;
+    padding: 0% 7% 0 7%;
+  }
+  #nomet{
+    margin-top: 2vw;
+  }
