@@ -27,7 +27,22 @@ export default function Cards() {
 
     return (
         <div>Pagina do Aluno {params.id}<br/>
-        
+        {loading && <Clipboard
+            color ={"pink"}
+            loading={Loading}
+            size={150}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+        />}
+        {aluno && <Card style={{width:'18rem'}}>
+            <Cards.img variant="top" src= "holder.js/100px180"/>
+            <Cards.Body>
+                <Cards.Title>{aluno.id}</Cards.Title>
+                <Card.Text>
+                    {aluno.name}
+                </Card.Text>
+                <Button variant="primary">{aluno.curso}</Button>
+            </Card>}
 
         </div>
 

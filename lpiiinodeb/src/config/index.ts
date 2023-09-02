@@ -5,6 +5,7 @@ import morgan from 'morgan'
 import logger from './logger';
 import authRouter from '../routes/auth.router';
 import { validate } from 'uuid';
+import { validator } from '../controllers/auth.validator';
 
 const app = express();
 app.use(cors());
@@ -20,8 +21,12 @@ app.get('/name', (req: Request, res: Response) => {
 app.get('/dados-fake', (req: Request, res: Response) => {
     setTimeout(() => res.json([3,6,5,3,2,7,5]), 5000);
 })
-app.use('/users', validate);
+app.use('/users', validator);
+app.use('/alunos', validator)
 app.use('/users', userRouter)
 app.use('/auth', authRouter);
+app.use('/alunos', (res:Response, req:Request) =>{
+    res.json("ok")
+})
 
 export default app;
